@@ -14,8 +14,10 @@
 		<properties>
 			<!-- Driver for DB database -->
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
 			<!-- URL for DB -->
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/testdb" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/testdb?serverTimezone=UTC" />
 			<!-- Username -->
 			<property name="javax.persistence.jdbc.user" value="root"/>
 			<!-- Password -->

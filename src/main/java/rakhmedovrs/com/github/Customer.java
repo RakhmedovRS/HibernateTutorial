@@ -21,10 +21,10 @@ public class Customer implements Serializable
 	private int id;
 
 	@Column(name = "firstName", nullable = false)
-	private int firstName;
+	private String firstName;
 
 	@Column(name = "lastName", nullable = false)
-	private int lastName;
+	private String lastName;
 
 	public int getId()
 	{
@@ -36,23 +36,33 @@ public class Customer implements Serializable
 		this.id = id;
 	}
 
-	public int getFirstName()
+	public String getFirstName()
 	{
 		return firstName;
 	}
 
-	public void setFirstName(int firstName)
+	public void setFirstName(String firstName)
 	{
 		this.firstName = firstName;
 	}
 
-	public int getLastName()
+	public String getLastName()
 	{
 		return lastName;
 	}
 
-	public void setLastName(int lastName)
+	public void setLastName(String lastName)
 	{
 		this.lastName = lastName;
+	}
+
+	@Override
+	public String toString()
+	{
+		return "Customer{" +
+			"id=" + id +
+			", firstName='" + firstName + '\'' +
+			", lastName='" + lastName + '\'' +
+			'}';
 	}
 }
